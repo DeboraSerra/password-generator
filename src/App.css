@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+:root {
+
+  --main-color: rgb(67, 67, 248);
+
+  --main-lighter: rgb(127, 127, 248);
+
+  --main-darker: rgb(42, 42, 150);
+
+  --secondary-color: rgb(10, 10, 50);
+
+  --secondary-lighter: rgba(20, 20, 50, 0.862);
+
+  --secondary-darker: rgb(0, 0, 30);
+
+  --accent: yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: var(--main-lighter);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+::selection {
+  background-color: var(--accent);
+  color: var(--secondary-darker);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  border-radius: 12px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  margin: auto;
+  max-width: 350px;
+  padding: 24px 16px;
+  width: 80%;
+}
+
+.App h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.password {
+  background-color: var(--secondary-lighter);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 12px 6px;
+  width: 95%;
+}
+
+.range-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin: 0 auto 12px;
+  width: 95%;
+}
+
+.length-sect {
+  background-color: var(--secondary-lighter);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.range {
+  width: 85%;
+  position: relative;
+}
+
+.range:before {
+  color: white;
+  content: '4';
+  font-size: 1rem;
+  position: absolute;
+  left: -16px;
+  top: -6px;
+}
+
+.range:after {
+  color: white;
+  content: '32';
+  font-size: 1rem;
+  position: absolute;
+  right: -24px;
+  top: -6px;
+}
+
+.settings-sect {
+  width: 95%;
+  margin: auto;
+}
+
+.switch-sect {
+  background-color: var(--secondary-lighter);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  padding: 12px 6px;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.send-btn {
+  background-image: linear-gradient(105.32deg, var(--main-lighter), var(--main-darker));
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 95%;
+}
+
+.send-btn:active {
+  background-color: var(--accent);
+}
+
+legend {
+  text-align: left;
+  font-size: 0.8rem;
 }
