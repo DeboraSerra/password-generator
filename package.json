@@ -2,7 +2,7 @@
   "name": "exercise-password-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://deboraserra.github.io/password-generator",
+  "homepage": "https://deboraserra.github.io/password-generator/",
   "engines": {
     "node": "16"
   },
